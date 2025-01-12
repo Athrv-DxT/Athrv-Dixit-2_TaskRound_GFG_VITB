@@ -8,12 +8,11 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 PROBLEMS = {
-    # BEGINNER LEVEL (2 questions)
+    # BEGINNER LEVEL 
     "hello_world": {
         "title": "Hello World",
         "description": "Write a function that takes a name and returns a greeting message.",
@@ -41,7 +40,7 @@ PROBLEMS = {
         "hints": ["Use if-elif-else statements", "Check ranges from highest to lowest"]
     },
 
-    # INTERMEDIATE LEVEL (5 questions)
+    # INTERMEDIATE LEVEL 
     "matrix_addition": {
         "title": "Matrix Addition",
         "description": "Write a function that adds two matrices (2D lists) of the same size.",
@@ -103,7 +102,7 @@ PROBLEMS = {
         "hints": ["Handle k > array length", "Try using array slicing"]
     },
 
-    # PRO LEVEL (4 questions)
+    # PRO LEVEL 
     "merge_intervals": {
         "title": "Merge Intervals",
         "description": "Given a list of intervals, merge all overlapping intervals.",
@@ -153,7 +152,7 @@ PROBLEMS = {
         "hints": ["Use cumulative sum", "Track frequency of sums"]
     },
 
-    # ADVANCED LEVEL (4 questions)
+    # ADVANCED LEVEL 
     "word_break": {
         "title": "Word Break Problem",
         "description": "Determine if a string can be segmented into words from a dictionary.",

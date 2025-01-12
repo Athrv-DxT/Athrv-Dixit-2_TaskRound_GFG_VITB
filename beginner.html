@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Challenges</title>
+    <link rel="stylesheet" href="styles-e.css">
+</head>
+<body class="challenge-page beginner">
+    <nav class="navbar">
+        <div class="logo">CodeChallenges</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="beginner.html" class="active">Beginner</a>
+            <a href="intermediate.html">Intermediate</a>
+            <a href="pro.html">Pro</a>
+            <a href="advanced.html">Advanced</a>
+        </div>
+    </nav>
+
+    <div class="challenge-container">
+        <div class="problem-selection">
+            <label for="problem_selector">Select a Problem:</label>
+            <select id="problem_selector" title="Problem Selection">
+                <option value="" disabled selected>Select a problem</option>
+            </select>
+        </div>
+
+        <div class="problem-details">
+            <h2 id="problem_Title"></h2>
+            <p id="problem_Description"></p>
+            <div class="function-signature">
+                <pre><code id="functionSignature"></code></pre>
+            </div>
+        </div>
+
+        <div class="editor-section">
+            <div class="editor-container">
+                <h3>Your Solution</h3>
+                <label for="codeEditor" class="sr-only">Code Editor</label>
+                <textarea id="codeEditor" spellcheck="false" title="Code Editor"></textarea>
+            </div>
+
+            <div class="test-cases">
+                <h3>Test Cases</h3>
+                <div id="testCasesList"></div>
+            </div>
+        </div>
+
+        <button id="submitButton" class="submit-btn">
+            <span class="btn-text">Submit Solution</span>
+            <div class="loader hidden"></div>
+        </button>
+
+        <div id="results" class="results-container hidden">
+            <div class="score-panel">
+                <h3>Results</h3>
+                <div id="scoreDisplay"></div>
+            </div>
+            <div id="testResults"></div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="levels.js"></script>
+</body>
+</html>
